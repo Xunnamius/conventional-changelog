@@ -1,0 +1,6 @@
+[user]
+email=unit-tester@fake.com
+name=unit-tester
+
+[safe]
+directory = *

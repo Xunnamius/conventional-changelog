@@ -1,59 +1,93 @@
-# Conventional Changelog
+<p align="center" width="100%">
+  <img width="300" src="./xchangelog.png">
+</p>
 
-[![Build status][build]][build-url]
-[![Coverage status][coverage]][coverage-url]
+<p align="center" width="100%">
+A <a href="https://github.com/conventional-changelog/conventional-changelog" target="_blank">conventional-changelog-core</a> fork with bug fixes
+</p>
 
-[build]: https://img.shields.io/github/actions/workflow/status/conventional-changelog/conventional-changelog/tests.yaml?branch=master
-[build-url]: https://github.com/conventional-changelog/conventional-changelog/actions
+<hr />
 
-[coverage]: https://coveralls.io/repos/github/conventional-changelog/conventional-changelog/badge.svg?branch=master
-[coverage-url]: https://coveralls.io/github/conventional-changelog/conventional-changelog?branch=master
+<!-- badges-start -->
 
-Generate a CHANGELOG from git metadata.
+<div align="center">
 
-## About this Repo
+[![Black Lives Matter!][x-badge-blm-image]][x-badge-blm-link]
+[![Last commit timestamp][x-badge-lastcommit-image]][x-badge-repo-link]
+[![Codecov][x-badge-codecov-image]][x-badge-codecov-link]
+[![Source license][x-badge-license-image]][x-badge-license-link]
+[![Uses Semantic Release!][x-badge-semanticrelease-image]][x-badge-semanticrelease-link]
 
-The conventional-changelog repo is managed as a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md); it's composed of many npm packages.
+[![NPM version][x-badge-npm-image]][x-badge-npm-link]
+[![Monthly Downloads][x-badge-downloads-image]][x-badge-npm-link]
 
-The original `conventional-changelog/conventional-changelog` API repo can be
-found in [packages/conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog).
+</div>
 
-## Getting started
+<!-- badges-end -->
 
-It's recommended you use the high level [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) library, which is a drop-in replacement for npm's `version` command, handling automated version bumping, tagging and CHANGELOG generation.
+<br />
 
-Alternatively, if you'd like to move towards completely automating your release process as an output from CI/CD, consider using [semantic-release](https://github.com/semantic-release/semantic-release).
+# xchangelog (@-xun/changelog)
 
-You can also use one of the plugins if you are already using the tool:
+This [conventional-changelog-core][1] fork slightly tweaks the original to fix
+some bugs.
 
-## Plugins Supporting Conventional Changelog
+> \[!NOTE]
+>
+> The only reason to use xchangelog over [conventional-changelog-core][1] is if
+> you are using an [xscripts][2]-powered project or you need the bug fixes.
+> Otherwise, just use [conventional-changelog][1].
 
-- [grunt](https://github.com/btford/grunt-conventional-changelog)
-- [gulp](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/gulp-conventional-changelog)
-- [atom](https://github.com/conventional-changelog/atom-conventional-changelog)
-- [vscode](https://github.com/axetroy/vscode-changelog-generator)
-- [emacs](https://github.com/liuyinz/emacs-conventional-changelog)
+<br />
 
-## Modules Important to Conventional Changelog Ecosystem
+## Install
 
-- [conventional-changelog-cli](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli) - the full-featured command line interface
-- [standard-changelog](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/standard-changelog) - command line interface for the angular commit format.
-- [conventional-github-releaser](https://github.com/conventional-changelog/conventional-github-releaser) - Make a new GitHub release from git metadata
-- [conventional-recommended-bump](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-recommended-bump) - Get a recommended version bump based on conventional commits
-- [conventional-commits-detector](https://github.com/conventional-changelog/conventional-commits-detector) - Detect what commit message convention your repository is using
-- [commitizen](https://github.com/commitizen/cz-cli) - Simple commit conventions for internet citizens.
-- [commitlint](https://github.com/conventional-changelog/commitlint) - Lint commit messages
+To install xchangelog:
 
-## Node Support Policy
+```shell
+npm install --save-dev conventional-changelog-core@npm:@-xun/changelog
+```
 
-We only support [Long-Term Support](https://github.com/nodejs/Release) versions of Node.
+If you want to use a specific version of xchangelog, provide its semver:
 
-We specifically limit our support to LTS versions of Node, not because this package won't work on other versions, but because we have a limited amount of time, and supporting LTS offers the greatest return on that investment.
+```shell
+npm install --save-dev conventional-changelog-core@npm:@-xun/changelog@1.2.3
+```
 
-It's possible this package will work correctly on newer versions of Node. It may even be possible to use this package on older versions of Node, though that's more unlikely as we'll make every effort to take advantage of features available in the oldest LTS version we support.
+> \[!NOTE]
+>
+> xchangelog installations reuse the "conventional-changelog-core" name so that
+> plugins with conventional-changelog-core as a peer dependency are able to
+> recognize xchangelog's presence.
 
-As each Node LTS version reaches its end-of-life we will remove that version from the `node` `engines` property of our package's `package.json` file. Removing a Node version is considered a breaking change and will entail the publishing of a new major version of this package. We will not accept any requests to support an end-of-life version of Node. Any merge requests or issues supporting an end-of-life version of Node will be closed.
+## Usage
 
-We will accept code that allows this package to run on newer, non-LTS, versions of Node. Furthermore, we will attempt to ensure our own changes work on the latest version of Node. To help in that commitment, our continuous integration setup runs against all LTS versions of Node in addition the most recent Node release; called _current_.
+```js
+import conventionalChangelogCore from '@-xun/changelog';
 
-JavaScript package managers should allow you to install this package with any version of Node, with, at most, a warning if your version of Node does not fall within the range specified by our `node` `engines` property. If you encounter issues installing this package, please report the issue to your package manager.
+conventionalChangelogCore().pipe(process.stdout); // or any writable stream
+```
+
+See the [`conventionalChangelogCore`][3] upstream documentation for more
+details.
+
+## Contributing
+
+Consider contributing to upstream [conventional-changelog][1] instead.
+
+[x-badge-blm-image]: https://xunn.at/badge-blm "Join the movement!"
+[x-badge-blm-link]: https://xunn.at/donate-blm
+[x-badge-codecov-image]: https://img.shields.io/codecov/c/github/Xunnamius/xchangelog/main?style=flat-square&token=HWRIOBAAPW "Is this package well-tested?"
+[x-badge-codecov-link]: https://codecov.io/gh/Xunnamius/xchangelog
+[x-badge-downloads-image]: https://img.shields.io/npm/dm/@-xun/changelog?style=flat-square "Number of times this package has been downloaded per month"
+[x-badge-lastcommit-image]: https://img.shields.io/github/last-commit/Xunnamius/xchangelog?style=flat-square "Latest commit timestamp"
+[x-badge-license-image]: https://img.shields.io/npm/l/@-xun/changelog?style=flat-square "This package's source license"
+[x-badge-license-link]: https://github.com/Xunnamius/xchangelog/blob/main/LICENSE
+[x-badge-npm-image]: https://xunn.at/npm-pkg-version/@-xun/changelog "Install this package using npm or yarn!"
+[x-badge-npm-link]: https://www.npmjs.com/package/@-xun/changelog
+[x-badge-repo-link]: https://github.com/Xunnamius/xchangelog
+[x-badge-semanticrelease-image]: https://xunn.at/badge-semantic-release "This repo practices continuous integration and deployment!"
+[x-badge-semanticrelease-link]: https://github.com/semantic-release/semantic-release
+[1]: https://github.com/conventional-changelog/conventional-changelog
+[2]: https://github.com/Xunnamius/xscripts
+[3]: https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-core#api
