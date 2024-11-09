@@ -49,12 +49,12 @@
   ],
   "scripts": {
     "build": "NODE_NO_WARNINGS=1 tsc --project tsc.package.types.json --noCheck --incremental false",
-    "build:changelog": "NODE_NO_WARNINGS=1 xscripts build changelog --no-compat",
+    "build:changelog": "NODE_NO_WARNINGS=1 xscripts build changelog",
     "clean": "NODE_NO_WARNINGS=1 xscripts clean",
     "format": "NODE_NO_WARNINGS=1 xscripts format --hush --files README.md package.json conventional.config.cjs release.config.cjs .prettierignore tsconfig.json tsc.project.lint-unlimited.json .remarkrc.mjs",
     "lint": "NODE_NO_WARNINGS=1 xscripts lint --linter remark",
     "list-tasks": "NODE_NO_WARNINGS=1 xscripts list-tasks",
-    "release": "NODE_NO_WARNINGS=1 xscripts release --no-compat --skip-missing-tasks",
+    "release": "NODE_NO_WARNINGS=1 xscripts release --skip-missing-tasks",
     "test": "vitest run --coverage"
   },
   "dependencies": {
