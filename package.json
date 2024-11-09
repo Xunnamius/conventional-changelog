@@ -1,6 +1,6 @@
 {
   "name": "@-xun/changelog",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A conventional-changelog-core fork with bug fixes and support for multiple tag formats",
   "keywords": [
     "conventional-changelog",
@@ -71,7 +71,8 @@
     "hosted-git-info": "^7.0.0",
     "normalize-package-data": "^6.0.0",
     "read-package-up": "^11.0.0",
-    "read-pkg": "^9.0.0"
+    "read-pkg": "^9.0.0",
+    "type-fest": "^4.26.1"
   },
   "devDependencies": {
     "@-xun/scripts": "^1.24.0",
