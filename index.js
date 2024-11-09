@@ -19,14 +19,14 @@ import mergeConfig from './lib/merge-config.js'
  */
 
 /**
- * @typedef {import('conventional-changelog-writer').CommitKnownProps & import('conventional-commits-parser').Commit & { scope?: string | null, subject?: string | null }} XChangelogCommit
+ * @typedef {import('conventional-changelog-writer').CommitKnownProps & import('conventional-commits-parser').Commit & { scope?: string | null, subject?: string | null }} XchangelogCommit
  */
 
 /**
  * @typedef {XchangelogSpec & XchangelogConfigOptions & {
  * options: XchangelogOptions;
  * parserOpts: import('conventional-commits-parser').ParserOptions;
- * writerOpts: Omit<import('conventional-changelog-writer').Options<XChangelogCommit>, 'commitsSort'> & { commitsSort?: string[] }
+ * writerOpts: Omit<import('conventional-changelog-writer').Options<XchangelogCommit>, 'commitsSort'> & { commitsSort?: string[] }
  * }} XchangelogConfig
  */
 

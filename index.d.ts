@@ -8,13 +8,13 @@
  * @typedef {import('conventional-changelog-core').Options} XchangelogOptions
  */
 /**
- * @typedef {import('conventional-changelog-writer').CommitKnownProps & import('conventional-commits-parser').Commit & { scope?: string | null, subject?: string | null }} XChangelogCommit
+ * @typedef {import('conventional-changelog-writer').CommitKnownProps & import('conventional-commits-parser').Commit & { scope?: string | null, subject?: string | null }} XchangelogCommit
  */
 /**
  * @typedef {XchangelogSpec & XchangelogConfigOptions & {
  * options: XchangelogOptions;
  * parserOpts: import('conventional-commits-parser').ParserOptions;
- * writerOpts: Omit<import('conventional-changelog-writer').Options<XChangelogCommit>, 'commitsSort'> & { commitsSort?: string[] }
+ * writerOpts: Omit<import('conventional-changelog-writer').Options<XchangelogCommit>, 'commitsSort'> & { commitsSort?: string[] }
  * }} XchangelogConfig
  */
 /**
@@ -38,14 +38,14 @@ export default function conventionalChangelog(options?: (import("conventional-ch
 export type XchangelogSpec = import("conventional-changelog-config-spec").Config;
 export type XchangelogConfigOptions = import("conventional-changelog-core").Options.Config.Object;
 export type XchangelogOptions = import("conventional-changelog-core").Options;
-export type XChangelogCommit = import("conventional-changelog-writer").CommitKnownProps & import("conventional-commits-parser").Commit & {
+export type XchangelogCommit = import("conventional-changelog-writer").CommitKnownProps & import("conventional-commits-parser").Commit & {
     scope?: string | null;
     subject?: string | null;
 };
 export type XchangelogConfig = XchangelogSpec & XchangelogConfigOptions & {
     options: XchangelogOptions;
     parserOpts: import("conventional-commits-parser").ParserOptions;
-    writerOpts: Omit<import("conventional-changelog-writer").Options<XChangelogCommit>, "commitsSort"> & {
+    writerOpts: Omit<import("conventional-changelog-writer").Options<XchangelogCommit>, "commitsSort"> & {
         commitsSort?: string[];
     };
 };
