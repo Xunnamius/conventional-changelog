@@ -30,7 +30,7 @@ A <a href="https://github.com/conventional-changelog/conventional-changelog" tar
 # xchangelog (@-xun/changelog)
 
 This [conventional-changelog-core][1] fork slightly tweaks the original to fix
-some bugs.
+some bugs and bundle the correct type definitions.
 
 > \[!NOTE]
 >
