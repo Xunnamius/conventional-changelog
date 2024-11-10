@@ -64,7 +64,6 @@ npm install --save-dev @-xun/changelog@1.2.3
 > npm install --save-dev conventional-changelog-core@npm:@-xun/changelog
 > ```
 
-
 ## Usage
 
 ```js
