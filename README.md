@@ -45,20 +45,25 @@ some bugs and bundle the correct type definitions.
 To install xchangelog:
 
 ```shell
-npm install --save-dev conventional-changelog-core@npm:@-xun/changelog
+npm install --save-dev @-xun/changelog
 ```
 
 If you want to use a specific version of xchangelog, provide its semver:
 
 ```shell
-npm install --save-dev conventional-changelog-core@npm:@-xun/changelog@1.2.3
+npm install --save-dev @-xun/changelog@1.2.3
 ```
 
 > \[!NOTE]
 >
-> xchangelog installations reuse the "conventional-changelog-core" name so that
+> xchangelog installations can reuse the "conventional-changelog-core" name so that
 > plugins with conventional-changelog-core as a peer dependency are able to
-> recognize xchangelog's presence.
+> recognize xchangelog's presence. For example:
+>
+> ```
+> npm install --save-dev conventional-changelog-core@npm:@-xun/changelog
+> ```
+
 
 ## Usage
 
