@@ -1,6 +1,6 @@
 {
   "name": "@-xun/changelog",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "A conventional-changelog-core fork with bug fixes and support for multiple tag formats",
   "keywords": [
     "conventional-changelog",
