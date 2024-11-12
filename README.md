@@ -30,7 +30,18 @@ A <a href="https://github.com/conventional-changelog/conventional-changelog" tar
 # xchangelog (@-xun/changelog)
 
 This [conventional-changelog-core][1] fork slightly tweaks the original to fix
-some bugs and bundle the correct type definitions.
+some bugs and bundle type definitions that are more well-formed.
+
+Among the bugs fixed by this fork is one where [conventional-changelog-core][1],
+when given a release commit with multiple tags, will only accept the first tag
+in the list as the version tag if it matches (i.e. starts with
+[`tagPrefix`][4]). Without this fix, when the _actual_ matching version tag is
+not first in the list, strange things happen.
+
+Multiple tags on the same release commit is useful when, for instance, you
+transmute a polyrepo into a monorepo and need to alias the original
+`v${version}`-style tags with the more monorepo-friendly
+`${package-name}@${version}`-style tags.
 
 > \[!NOTE]
 >
@@ -95,3 +106,4 @@ Consider contributing to upstream [conventional-changelog][1] instead.
 [1]: https://github.com/conventional-changelog/conventional-changelog
 [2]: https://github.com/Xunnamius/xscripts
 [3]: https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-core#api
+[4]: https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-core#tagprefix
