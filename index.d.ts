@@ -22,6 +22,7 @@
  */
 /**
  * @typedef {XchangelogSpec & XchangelogConfigOptions & {
+ *   context: { packageName?: string },
  *   options: XchangelogOptions;
  *   parserOpts: import('conventional-commits-parser').ParserOptions;
  *   writerOpts: Omit<import('conventional-changelog-writer').Options<XchangelogCommit>, 'commitsSort'> & { commitsSort?: string[] }
@@ -56,6 +57,9 @@ export type XchangelogCommit = Omit<import("type-fest").OmitIndexSignature<impor
     revert?: Record<string, string | null | undefined> | null;
 };
 export type XchangelogConfig = XchangelogSpec & XchangelogConfigOptions & {
+    context: {
+        packageName?: string;
+    };
     options: XchangelogOptions;
     parserOpts: import("conventional-commits-parser").ParserOptions;
     writerOpts: Omit<import("conventional-changelog-writer").Options<XchangelogCommit>, "commitsSort"> & {

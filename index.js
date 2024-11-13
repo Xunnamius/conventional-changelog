@@ -34,6 +34,7 @@ import mergeConfig from './lib/merge-config.js'
 
 /**
  * @typedef {XchangelogSpec & XchangelogConfigOptions & {
+ *   context: { packageName?: string },
  *   options: XchangelogOptions;
  *   parserOpts: import('conventional-commits-parser').ParserOptions;
  *   writerOpts: Omit<import('conventional-changelog-writer').Options<XchangelogCommit>, 'commitsSort'> & { commitsSort?: string[] }
