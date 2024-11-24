@@ -67,11 +67,11 @@ npm install --save-dev @-xun/changelog@1.2.3
 
 > \[!NOTE]
 >
-> xchangelog installations can reuse the "conventional-changelog-core" name so that
-> plugins with conventional-changelog-core as a peer dependency are able to
+> xchangelog installations can reuse the "conventional-changelog-core" name so
+> that plugins with conventional-changelog-core as a peer dependency are able to
 > recognize xchangelog's presence. For example:
 >
-> ```
+> ```bash
 > npm install --save-dev conventional-changelog-core@npm:@-xun/changelog
 > ```
 
@@ -90,20 +90,36 @@ details.
 
 Consider contributing to upstream [conventional-changelog][1] instead.
 
-[x-badge-blm-image]: https://xunn.at/badge-blm "Join the movement!"
+[x-badge-blm-image]: https://xunn.at/badge-blm 'Join the movement!'
 [x-badge-blm-link]: https://xunn.at/donate-blm
-[x-badge-codecov-image]: https://img.shields.io/codecov/c/github/Xunnamius/xchangelog/main?style=flat-square&token=HWRIOBAAPW "Is this package well-tested?"
+[x-badge-codecov-image]:
+  https://img.shields.io/codecov/c/github/Xunnamius/xchangelog/main?style=flat-square&token=HWRIOBAAPW
+  'Is this package well-tested?'
 [x-badge-codecov-link]: https://codecov.io/gh/Xunnamius/xchangelog
-[x-badge-downloads-image]: https://img.shields.io/npm/dm/@-xun/changelog?style=flat-square "Number of times this package has been downloaded per month"
-[x-badge-lastcommit-image]: https://img.shields.io/github/last-commit/Xunnamius/xchangelog?style=flat-square "Latest commit timestamp"
-[x-badge-license-image]: https://img.shields.io/npm/l/@-xun/changelog?style=flat-square "This package's source license"
-[x-badge-license-link]: https://github.com/Xunnamius/xchangelog/blob/main/LICENSE
-[x-badge-npm-image]: https://xunn.at/npm-pkg-version/@-xun/changelog "Install this package using npm or yarn!"
+[x-badge-downloads-image]:
+  https://img.shields.io/npm/dm/@-xun/changelog?style=flat-square
+  'Number of times this package has been downloaded per month'
+[x-badge-lastcommit-image]:
+  https://img.shields.io/github/last-commit/Xunnamius/xchangelog?style=flat-square
+  'Latest commit timestamp'
+[x-badge-license-image]:
+  https://img.shields.io/npm/l/@-xun/changelog?style=flat-square
+  "This package's source license"
+[x-badge-license-link]:
+  https://github.com/Xunnamius/xchangelog/blob/main/LICENSE
+[x-badge-npm-image]:
+  https://xunn.at/npm-pkg-version/@-xun/changelog
+  'Install this package using npm or yarn!'
 [x-badge-npm-link]: https://www.npmjs.com/package/@-xun/changelog
 [x-badge-repo-link]: https://github.com/Xunnamius/xchangelog
-[x-badge-semanticrelease-image]: https://xunn.at/badge-semantic-release "This repo practices continuous integration and deployment!"
-[x-badge-semanticrelease-link]: https://github.com/semantic-release/semantic-release
+[x-badge-semanticrelease-image]:
+  https://xunn.at/badge-semantic-release
+  'This repo practices continuous integration and deployment!'
+[x-badge-semanticrelease-link]:
+  https://github.com/semantic-release/semantic-release
 [1]: https://github.com/conventional-changelog/conventional-changelog
 [2]: https://github.com/Xunnamius/xscripts
-[3]: https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-core#api
-[4]: https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-core#tagprefix
+[3]:
+  https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-core#api
+[4]:
+  https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-core#tagprefix
