@@ -72,14 +72,14 @@
     "hosted-git-info": "^7.0.0",
     "normalize-package-data": "^6.0.0",
     "read-package-up": "^11.0.0",
-    "read-pkg": "^9.0.0",
-    "type-fest": "^4.26.1"
+    "read-pkg": "^9.0.1",
+    "type-fest": "^4.28.0"
   },
   "devDependencies": {
-    "@-xun/scripts": "^1.29.1",
-    "@vitest/coverage-v8": "^2.0.0",
+    "@-xun/scripts": "^1.30.0",
+    "@vitest/coverage-v8": "^2.1.5",
     "better-than-before": "^1.0.0",
-    "vitest": "^2.0.0"
+    "vitest": "^2.1.5"
   },
   "engines": {
     "node": ">=18"
