@@ -41,11 +41,11 @@
  * @param {Record<string, unknown>} [gitRawExecOpts]
  * @returns {Readable}
  */
-export default function conventionalChangelog(options?: (import("conventional-changelog-core").Options<XchangelogCommit, import("conventional-changelog-writer").Context<import("conventional-changelog-writer").CommitKnownProps>> & {
+export default function conventionalChangelog(options?: import("conventional-changelog-core").Options<XchangelogCommit> & {
     cwd?: string;
-}) | undefined, context?: import("conventional-changelog-core").Context | undefined, gitRawCommitsOpts?: import("conventional-changelog-core").GitRawCommitsOptions | undefined, parserOpts?: import("conventional-changelog-core").ParserOptions | undefined, writerOpts?: (import("conventional-changelog-core").WriterOptions<XchangelogCommit, import("conventional-changelog-writer").Context<import("conventional-changelog-writer").CommitKnownProps>> & {
+}, context?: import("conventional-changelog-core").Context, gitRawCommitsOpts?: import("conventional-changelog-core").GitRawCommitsOptions, parserOpts?: import("conventional-changelog-core").ParserOptions, writerOpts?: import("conventional-changelog-core").WriterOptions<XchangelogCommit> & {
     includeDetails?: boolean;
-}) | undefined, gitRawExecOpts?: Record<string, unknown> | undefined): Readable;
+}, gitRawExecOpts?: Record<string, unknown>): Readable;
 export type XchangelogSpec = import("conventional-changelog-config-spec").Config;
 export type XchangelogConfigOptions = import("conventional-changelog-core").Options.Config.Object;
 export type XchangelogOptions = import("conventional-changelog-core").Options;

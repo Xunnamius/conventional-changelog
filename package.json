@@ -52,8 +52,10 @@
     "build:changelog": "symbiote build changelog --env NODE_NO_WARNINGS=1",
     "clean": "symbiote clean --env NODE_NO_WARNINGS=1",
     "format": "symbiote format --env NODE_NO_WARNINGS=1 --hush --files README.md package.json conventional.config.cjs release.config.cjs .prettierignore tsconfig.json tsc.project.lint-unlimited.json .remarkrc.mjs",
+    "info": "symbiote project info --env NODE_NO_WARNINGS=1",
     "lint": "symbiote lint --env NODE_NO_WARNINGS=1 --hush --linter remark",
     "list-tasks": "symbiote list-tasks --env NODE_NO_WARNINGS=1 --scope this-package",
+    "prepare": "symbiote project prepare --env NODE_NO_WARNINGS=1",
     "release": "symbiote release --env NODE_NO_WARNINGS=1",
     "test": "vitest run --coverage"
   },
