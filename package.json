@@ -56,7 +56,7 @@
     "lint": "symbiote lint --env NODE_NO_WARNINGS=1 --hush --linter remark",
     "list-tasks": "symbiote list-tasks --env NODE_NO_WARNINGS=1 --scope this-package",
     "prepare": "symbiote project prepare --env NODE_NO_WARNINGS=1",
-    "release": "symbiote release --env NODE_NO_WARNINGS=1",
+    "release": "symbiote release --env NODE_NO_WARNINGS=1 --skip-task 6",
     "test": "vitest run --coverage"
   },
   "dependencies": {
