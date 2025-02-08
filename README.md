@@ -43,10 +43,10 @@ transmute a polyrepo into a monorepo and need to alias the original
 `v${version}`-style tags with the more monorepo-friendly
 `${package-name}@${version}`-style tags.
 
-> \[!NOTE]
+> [!NOTE]
 >
 > The only reason to use xchangelog over [conventional-changelog-core][1] is if
-> you are using an [xscripts][2]-powered project or you need the bug fixes.
+> you are using an [symbiote][2]-powered project or you need the bug fixes.
 > Otherwise, just use [conventional-changelog][1].
 
 <br />
@@ -65,7 +65,7 @@ If you want to use a specific version of xchangelog, provide its semver:
 npm install --save-dev @-xun/changelog@1.2.3
 ```
 
-> \[!NOTE]
+> [!NOTE]
 >
 > xchangelog installations can reuse the "conventional-changelog-core" name so
 > that plugins with conventional-changelog-core as a peer dependency are able to
@@ -118,7 +118,7 @@ Consider contributing to upstream [conventional-changelog][1] instead.
 [x-badge-semanticrelease-link]:
   https://github.com/semantic-release/semantic-release
 [1]: https://github.com/conventional-changelog/conventional-changelog
-[2]: https://github.com/Xunnamius/xscripts
+[2]: https://github.com/Xunnamius/symbiote
 [3]:
   https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-core#api
 [4]:

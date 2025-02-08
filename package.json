@@ -49,20 +49,20 @@
   ],
   "scripts": {
     "build": "NODE_NO_WARNINGS=1 tsc --project tsc.package.types.json --noCheck --incremental false",
-    "build:changelog": "NODE_NO_WARNINGS=1 xscripts build changelog",
-    "clean": "NODE_NO_WARNINGS=1 xscripts clean",
-    "format": "NODE_NO_WARNINGS=1 xscripts format --hush --files README.md package.json conventional.config.cjs release.config.cjs .prettierignore tsconfig.json tsc.project.lint-unlimited.json .remarkrc.mjs",
-    "lint": "NODE_NO_WARNINGS=1 xscripts lint --linter remark",
-    "list-tasks": "NODE_NO_WARNINGS=1 xscripts list-tasks",
-    "release": "NODE_NO_WARNINGS=1 xscripts release --skip-task-missing-scripts",
+    "build:changelog": "symbiote build changelog --env NODE_NO_WARNINGS=1",
+    "clean": "symbiote clean --env NODE_NO_WARNINGS=1",
+    "format": "symbiote format --env NODE_NO_WARNINGS=1 --hush --files README.md package.json conventional.config.cjs release.config.cjs .prettierignore tsconfig.json tsc.project.lint-unlimited.json .remarkrc.mjs",
+    "lint": "symbiote lint --env NODE_NO_WARNINGS=1 --hush --linter remark",
+    "list-tasks": "symbiote list-tasks --env NODE_NO_WARNINGS=1 --scope this-package",
+    "release": "symbiote release --env NODE_NO_WARNINGS=1",
     "test": "vitest run --coverage"
   },
   "dependencies": {
     "@hutson/parse-repository-url": "^5.0.0",
     "@types/conventional-changelog-config-spec": "^2.1.5",
-    "@types/conventional-changelog-core": "^4.2.8",
+    "@types/conventional-changelog-core": "^8.0.0",
     "@types/conventional-changelog-writer": "^4.0.10",
-    "@types/conventional-commits-parser": "^5.0.0",
+    "@types/conventional-commits-parser": "^5.0.1",
     "add-stream": "^1.0.0",
     "conventional-changelog-writer": "^8.0.0",
     "conventional-commits-parser": "^6.0.0",
@@ -73,10 +73,10 @@
     "normalize-package-data": "^6.0.0",
     "read-package-up": "^11.0.0",
     "read-pkg": "^9.0.1",
-    "type-fest": "^4.28.0"
+    "type-fest": "^4.33.0"
   },
   "devDependencies": {
-    "@-xun/scripts": "^1.30.0",
+    "@-xun/symbiote": "^2.23.6",
     "@vitest/coverage-v8": "^2.1.5",
     "better-than-before": "^1.0.0",
     "vitest": "^2.1.5"
