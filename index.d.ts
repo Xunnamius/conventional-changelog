@@ -41,47 +41,29 @@
  * @param {Record<string, unknown>} [gitRawExecOpts]
  * @returns {Readable}
  */
-export default function conventionalChangelog(
-  options?: import('conventional-changelog-core').Options<XchangelogCommit> & {
+export default function conventionalChangelog(options?: import("conventional-changelog-core").Options<XchangelogCommit> & {
     cwd?: string;
-  },
-  context?: import('conventional-changelog-core').Context,
-  gitRawCommitsOpts?: import('conventional-changelog-core').GitRawCommitsOptions,
-  parserOpts?: import('conventional-changelog-core').ParserOptions,
-  writerOpts?: import('conventional-changelog-core').WriterOptions<XchangelogCommit> & {
+}, context?: import("conventional-changelog-core").Context, gitRawCommitsOpts?: import("conventional-changelog-core").GitRawCommitsOptions, parserOpts?: import("conventional-changelog-core").ParserOptions, writerOpts?: import("conventional-changelog-core").WriterOptions<XchangelogCommit> & {
     includeDetails?: boolean;
-  },
-  gitRawExecOpts?: Record<string, unknown>
-): Readable;
-export type XchangelogSpec = import('conventional-changelog-config-spec').Config;
-export type XchangelogConfigOptions =
-  import('conventional-changelog-core').Options.Config.Object;
-export type XchangelogOptions = import('conventional-changelog-core').Options;
-export type XchangelogCommit = Omit<
-  import('type-fest').OmitIndexSignature<
-    import('conventional-changelog-writer').CommitKnownProps &
-      import('conventional-commits-parser').Commit & {
-        scope?: string | null;
-        subject?: string | null;
-        shortHash?: string | null;
-      }
-  >,
-  'revert'
-> & {
-  revert?: Record<string, string | null | undefined> | null;
+}, gitRawExecOpts?: Record<string, unknown>): Readable;
+export type XchangelogSpec = import("conventional-changelog-config-spec").Config;
+export type XchangelogConfigOptions = import("conventional-changelog-core").Options.Config.Object;
+export type XchangelogOptions = import("conventional-changelog-core").Options;
+export type XchangelogCommit = Omit<import("type-fest").OmitIndexSignature<import("conventional-changelog-writer").CommitKnownProps & import("conventional-commits-parser").Commit & {
+    scope?: string | null;
+    subject?: string | null;
+    shortHash?: string | null;
+}>, "revert"> & {
+    revert?: Record<string, string | null | undefined> | null;
 };
-export type XchangelogConfig = XchangelogSpec &
-  XchangelogConfigOptions & {
+export type XchangelogConfig = XchangelogSpec & XchangelogConfigOptions & {
     context: {
-      packageName?: string;
+        packageName?: string;
     };
     options: XchangelogOptions;
-    parserOpts: import('conventional-commits-parser').ParserOptions;
-    writerOpts: Omit<
-      import('conventional-changelog-writer').Options<XchangelogCommit>,
-      'commitsSort'
-    > & {
-      commitsSort?: string[];
+    parserOpts: import("conventional-commits-parser").ParserOptions;
+    writerOpts: Omit<import("conventional-changelog-writer").Options<XchangelogCommit>, "commitsSort"> & {
+        commitsSort?: string[];
     };
-  };
+};
 import { Readable } from 'stream';
