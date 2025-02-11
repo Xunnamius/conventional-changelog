@@ -62,7 +62,7 @@
   "dependencies": {
     "@hutson/parse-repository-url": "^5.0.0",
     "@types/conventional-changelog-config-spec": "^2.1.5",
-    "@types/conventional-changelog-core": "^8.0.0",
+    "@types/conventional-changelog-core": "^4.2.8",
     "@types/conventional-changelog-writer": "^4.0.10",
     "@types/conventional-commits-parser": "^5.0.1",
     "add-stream": "^1.0.0",
