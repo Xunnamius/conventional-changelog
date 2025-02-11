@@ -75,10 +75,10 @@
     "normalize-package-data": "^6.0.0",
     "read-package-up": "^11.0.0",
     "read-pkg": "^9.0.1",
-    "type-fest": "^4.33.0"
+    "type-fest": "^4.34.1"
   },
   "devDependencies": {
-    "@-xun/symbiote": "^2.23.7",
+    "@-xun/symbiote": "^2.23.8",
     "@vitest/coverage-v8": "^2.1.5",
     "better-than-before": "^1.0.0",
     "vitest": "^2.1.5"
